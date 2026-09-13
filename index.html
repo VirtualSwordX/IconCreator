@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>PNG to Icon Converter</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <h1>PNG to Icon Converter</h1>
+    <p class="Description">
+        Use this tool to convert your PNG images into ICO (Windows) or ICNS (macOS) icon formats. 
+    </p>
+
+    <div class="instructionBox">
+        <h2>How to Use</h2>
+        <p>1. Upload your PNG files (square, max 1024×1024 size) for best results.</p>
+        <p>2. Select the output format: <strong>ICO</strong> for Windows or <strong>ICNS</strong> for macOS.</p>
+        <p>3. Click <em>Create</em> and download your icon file.</p>
+    </div>
+
+    <div class="Upload">
+        <div id="uploadSection">
+            <input type="file" id="pngFiles" multiple accept="image/png">
+            <button id="clearAll">Clear All</button>
+            <div id="inputPreview" class="preview"></div>
+            <p id="uploadWarnings" class="warnings"></p>
+        </div>
+
+        <h3>Preferred Sizes:</h3>
+        <div id="sizeChecklist" class="checklist"></div>
+    </div>
+
+    <div class="formatSection">
+        <button id="createIco">Create ICO</button>
+        <button id="createIcns">Create ICNS</button>
+    </div>
+    
+    <div id="output" class="download-links"></div>
+    <p id="warnings" class="warnings"></p>
+
+    <h2 id="previewHeading" style="display:none;">Generated Icon Preview:</h2>
+    <div id="outputPreview" class="preview"></div>
+
+    <hr>
+
+    <h2>Why Use PNG, ICO, or ICNS?</h2>
+    <p><strong>PNG (Portable Network Graphics):</strong> PNG is ideal for creating icons because it is a lossless image format that supports transparency, high-quality colors, and preserves details.</p>
+    <p><strong>ICO (Windows):</strong> Supports multiple sizes in one file, required for Windows shortcuts and applications. Using ICO ensures your icon looks sharp at any resolution.</p>
+    <p><strong>ICNS (macOS):</strong> Used for macOS app icons, preserves quality at different resolutions and ensures your app icon displays correctly on all macOS devices.</p>
+    <p><strong>Why I created this tool:</strong> Most icon converters I found simply rescale a single image, which can reduce quality. This website allows you to upload multiple PNG files of different sizes to generate a complete icon set, ensuring each size looks sharp and professional.</p>
+
+    <p><a href="#" id="tosLink">Terms and Privacy</a></p>
+
+    <div id="tosModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Terms of Service</h2>
+            <p>
+                This PNG to Icon Converter is a free, client-side tool. 
+                This service is provided as is, without any guarantees. Use at your own risk.
+            </p>
+            <h2>Privacy Notice</h2>
+            <p>
+                All processing happens locally in your browser. No images or files you upload are ever sent to a server or stored. 
+                Refreshing the page will erase all uploaded files and generated icons. Your data stays private and temporary.
+            </p>
+        </div>
+    </div>
+
+    <script type="module" src="/src/main.js"></script>
+</body>
+</html>
